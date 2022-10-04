@@ -5,6 +5,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './App.css';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 function App() {
@@ -132,7 +133,7 @@ function gameOver() {
         </div>
       </header>
       {loading ? (
-        <p className="loading">Loading...</p>
+        <CircularProgress />
       ) : (
         <RickMortyGrid
           character={character}
