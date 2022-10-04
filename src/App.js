@@ -5,7 +5,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './App.css';
-import Modal from '@mui/material/Modal';
+
 
 function App() {
 const [score, setScore] = useState({ currentScore: 0, highScore: 0});
@@ -32,7 +32,7 @@ const fetchCharacter = async () => {
 
 const getCharacter = async (randomCharacter) => {
   const characterList = [];
-  for (let i = 0; i < randomCharacter.length; i++) {
+  for (let i = 0; i < randomCharacter.length; i++){
     const characterURL = randomCharacter[i][0].url;
     const response = await fetch(characterURL);
     const character = await response.json();
